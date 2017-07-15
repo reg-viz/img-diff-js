@@ -1,0 +1,37 @@
+{
+  "name": "img-diff-js",
+  "version": "0.0.1",
+  "description": "Library to compare 2 images",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reg-viz/img-diff-js.git"
+  },
+  "keywords": [
+    "diff",
+    "image",
+    "compare"
+  ],
+  "author": "Quramy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reg-viz/img-diff-js/issues"
+  },
+  "homepage": "https://github.com/reg-viz/img-diff-js#readme",
+  "dependencies": {
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.2.0"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "cp-file": "^4.2.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1"
+  },
+  "ava": {
+    "files": "lib/**/*.test.js"
+  }
+}
