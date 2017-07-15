@@ -58,3 +58,4 @@ typings/
 .env
 
 *_generated.png
+.performance/
