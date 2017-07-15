@@ -21,9 +21,9 @@ npm install img-diff-js
 ## API Usage
 
 ```js
-const { imageDiff } = require('image-diff-js');
+const { imgDiff } = require('img-diff-js');
 
-imageDiff({
+imgDiff({
   actualFilename: 'example/actual.png',
   expectedFilename: 'example/expected.png',
   diffFilename: 'example/diff.png',
