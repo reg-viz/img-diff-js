@@ -31,6 +31,13 @@ imageDiff({
 .then(result => console.log(result.width, result.height));
 ```
 
+## Available format
+
+- [x] png
+- [ ] jpeg
+- [ ] bmp
+- etc...
+
 ## Performance
 
  | case name | img-diff-js | image-difference | image-diff | 
