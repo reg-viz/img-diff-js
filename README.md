@@ -5,8 +5,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
+:art: Node.js library to compare 2 images without native libs.
 
-Node.js library to compare 2 images without native libs.
+| Actual | Expected | Difference |
+|:---:|:---:|:---:|
+| ![actual](example/actual.png) | ![expected](example/expected.png) | ![diff](example/diff.png) |
 
 ## Install
 
