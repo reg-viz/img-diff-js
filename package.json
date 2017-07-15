@@ -35,6 +35,6 @@
     "rimraf": "^2.6.1"
   },
   "ava": {
-    "files": "lib/**/*.test.js"
+    "files": "test/**/*.test.js"
   }
 }
