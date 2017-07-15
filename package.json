@@ -1,8 +1,8 @@
 {
   "name": "img-diff-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Library to compare 2 images",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "ava"
   },
@@ -28,6 +28,7 @@
   "devDependencies": {
     "ava": "^0.21.0",
     "cp-file": "^4.2.0",
+    "image-difference": "^2.0.7",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.1"
   },
