@@ -34,7 +34,7 @@ imgDiff({
 ## Available format
 
 - [x] png
-- [ ] jpeg
+- [x] jpeg
 - [ ] bmp
 - etc...
 
@@ -42,8 +42,8 @@ imgDiff({
 
  | case name | img-diff-js | image-difference | image-diff | 
  |:---|---:|---:|---:|
- | 30 same PNGs | 554 msec | 7011 msec | 10233 msec | 
- | 30 diff PNGs | 519 msec | 6956 msec | 12786 msec | 
+ | 30 same dimension PNGs | 412 msec | 2765 msec | 3781 msec | 
+ | 30 same dimension JPEGs | 528 msec | 4489 msec | 9455 msec || 30 diff PNGs | 519 msec | 6956 msec | 12786 msec | 
 
 The above table was captured under [Travis-CI](https://travis-ci.org/reg-viz/img-diff-js). If you want the latest result, check the raw log.
 
