@@ -35,7 +35,7 @@ function comparisonComparison(opt) {
   return () => {
     const { actualFilename, expectedFilename } = opt;
     const subdirName = opt.name.replace(/\s+/g, "_");
-    const arr = new Array(opt.iterationCount || 30).join("+").split("+").map((_, i) => i);
+    const arr = new Array(opt.iterationCount || 50).join("+").split("+").map((_, i) => i);
 
     const p1 = () => Promise.all(arr.map(i => imgDiff({ actualFilename, expectedFilename, diffFilename: `.performance/${subdirName}/diff_1_${i}.png` })));
     const p2 = () => Promise.all(arr.map(i => imageDifference({ actualFilename, expectedFilename, diffFilename: `.performance/${subdirName}/diff_2_${i}.png` })));
@@ -61,8 +61,9 @@ function images(strings, ...values) {
 }
 
 [
-  comparisonComparison({ name: "30 same dimension PNGs", actualFilename: images `actual.png`, expectedFilename: images `expected.png` }),
-  comparisonComparison({ name: "30 same dimension JPEGs", actualFilename: images `actual.jpg`, expectedFilename: images `expected.jpg` }),
+  comparisonComparison({ name: "50 same dimension PNGs", actualFilename: images `actual.png`, expectedFilename: images `expected.png` }),
+  comparisonComparison({ name: "50 different dimension PNGs", actualFilename: images `actual_wide.png`, expectedFilename: images `expected.png` }),
+  comparisonComparison({ name: "50 same dimension JPEGs", actualFilename: images `actual.jpg`, expectedFilename: images `expected.jpg` }),
 ]
   .reduce((queue, p) => queue.then(x => p().then(y => [...x, y])), Promise.resolve([]))
   .then(resuletsList => {
