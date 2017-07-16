@@ -18,8 +18,6 @@
 npm install img-diff-js
 ```
 
-## API Usage
-
 ```js
 const { imgDiff } = require('img-diff-js');
 
@@ -27,16 +25,56 @@ imgDiff({
   actualFilename: 'example/actual.png',
   expectedFilename: 'example/expected.png',
   diffFilename: 'example/diff.png',
-})
-.then(result => console.log(result.width, result.height));
+}).then(result => console.log(result));
 ```
 
+## API Usage
+
+### `imgDiff(opt: ImgDiffOptions): Promise<ImgDiffRestul>`
+Create image differential between two images
+
+#### `ImgDiffOptions`
+
+```ts
+{
+  actualFilename: string;
+  expectedFilename: string;
+  diffFilename?: string;
+  options?: {
+    threshold?: number;   // default 0.1
+    includeAA?: boolean;  // default false
+  }
+}
+```
+
+- `actualFilename` - *Required* - Path to actual image file.
+- `expectedFilename` - *Required* - Path to expected image file.
+- `diffFilename` - *Optional* - Path to differential image file. If omitted it, `imgDiff` does does not output image file.
+- `options` - *Optional* - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
+
+#### `ImgDiffResult`
+
+```ts
+{
+  width: number;
+  height: number;
+  imagesAreSame: boolean;
+}
+```
+
+- `width` - Differential image's width.
+- `height` - Differential image's height.
+- `imagesAreSame` - It'll be true only if 2 images are same perfectly.
+
 ## Available format
+
+The following codecs are available for input image files.
 
 - [x] png
 - [x] jpeg
 - [ ] bmp
-- etc...
+
+`imgDiff` detects the input image format from it's extension name. For example, if the input file name ends with ".jpeg", `imgDiff` attempts to decode in JPEG way regardless of the actual file format.
 
 ## Performance
 
@@ -47,6 +85,27 @@ imgDiff({
  | 50 same dimension JPEGs | 1076 msec | 10910 msec | 19078 msec | 
 
 The above table was captured under [Travis-CI](https://travis-ci.org/reg-viz/img-diff-js). If you want the latest result, check the raw log.
+
+## Contribute
+PR or issue is welcome :)
+
+### Setup
+
+```sh
+yarn
+```
+
+### Test
+
+```sh
+yarn test
+```
+
+### Run benchmark script
+
+```sh
+yarn run perf
+```
 
 ## License
 

@@ -4,18 +4,32 @@ import test from "ava";
 import rimraf from "rimraf";
 import { imgDiff } from "../";
 
-test("compare from 2 png files", async t => {
+test("compare with 2 png files", async t => {
   const diffFilename = path.resolve(__dirname, "images/diff_generated.png");
   rimraf.sync(diffFilename);
-  const { width, height } = await imgDiff({
+  await imgDiff({
+    actualFilename: path.resolve(__dirname, "images/actual.png"),
+    expectedFilename: path.resolve(__dirname, "images/expected.png"),
+  });
+  t.throws(() => fs.statSync(path.resolve(__dirname, "images/diff_generated.png")));
+  const { imagesAreSame } = await imgDiff({
     diffFilename,
     actualFilename: path.resolve(__dirname, "images/actual.png"),
     expectedFilename: path.resolve(__dirname, "images/expected.png"),
   });
+  t.is(imagesAreSame, false);
   t.truthy(fs.statSync(path.resolve(__dirname, "images/diff_generated.png")));
 });
 
-test("compare from 2 files whose dimension are different", async t => {
+test("compare with 2 same files", async t => {
+  const { imagesAreSame } = await imgDiff({
+    actualFilename: path.resolve(__dirname, "images/expected.png"),
+    expectedFilename: path.resolve(__dirname, "images/expected.png"),
+  });
+  t.is(imagesAreSame, true);
+});
+
+test("compare with 2 files whose dimension are different", async t => {
   const diffFilename = path.resolve(__dirname, "images/diff_generated.wide.png");
   rimraf.sync(diffFilename);
   const { width, height } = await imgDiff({
@@ -26,7 +40,7 @@ test("compare from 2 files whose dimension are different", async t => {
   t.truthy(fs.statSync(path.resolve(__dirname, "images/diff_generated.wide.png")));
 });
 
-test("compare from 2 jpeg files", async t => {
+test("compare with 2 jpeg files", async t => {
   const diffFilename = path.resolve(__dirname, "images/diff_generated.jpg.png");
   rimraf.sync(diffFilename);
   const { width, height } = await imgDiff({
