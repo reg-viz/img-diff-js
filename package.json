@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/reg-viz/img-diff-js#readme",
   "dependencies": {
+    "jpeg-js": "^0.3.3",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.2.0"
   },
@@ -35,6 +36,6 @@
     "rimraf": "^2.6.1"
   },
   "ava": {
-    "files": "lib/**/*.test.js"
+    "files": "test/**/*.test.js"
   }
 }
