@@ -56,9 +56,13 @@ function comparisonComparison(opt) {
 rimraf.sync(".performance");
 mkdirp.sync(".performance");
 
+function images(strings, ...values) {
+  return path.resolve(__dirname, "../test/images/" + strings[0]);
+}
+
 [
-  comparisonComparison({ name: "30 same PNGs", actualFilename: path.resolve(__dirname, "../example/actual.png"), expectedFilename: path.resolve(__dirname, "../example/actual.png") }),
-  comparisonComparison({ name: "30 diff PNGs", actualFilename: path.resolve(__dirname, "../example/actual.png"), expectedFilename: path.resolve(__dirname, "../example/expected.png") }),
+  comparisonComparison({ name: "30 same dimension PNGs", actualFilename: images `actual.png`, expectedFilename: images `expected.png` }),
+  comparisonComparison({ name: "30 same dimension JPEGs", actualFilename: images `actual.jpg`, expectedFilename: images `expected.jpg` }),
 ]
   .reduce((queue, p) => queue.then(x => p().then(y => [...x, y])), Promise.resolve([]))
   .then(resuletsList => {
