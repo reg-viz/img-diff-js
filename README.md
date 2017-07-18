@@ -72,6 +72,7 @@ The following codecs are available for input image files.
 
 - [x] png
 - [x] jpeg
+- [x] tiff (limited. See https://github.com/Quramy/decode-tiff#compatibility )
 - [ ] bmp
 
 `imgDiff` detects the input image format from it's extension name. For example, if the input file name ends with ".jpeg", `imgDiff` attempts to decode in JPEG way regardless of the actual file format.

@@ -41,6 +41,17 @@ test("compare with 2 files whose dimension are different", async t => {
 });
 
 test("compare with 2 jpeg files", async t => {
+  const diffFilename = path.resolve(__dirname, "images/diff_generated.tiff.png");
+  rimraf.sync(diffFilename);
+  const { width, height } = await imgDiff({
+    diffFilename,
+    actualFilename: path.resolve(__dirname, "images/actual.tiff"),
+    expectedFilename: path.resolve(__dirname, "images/expected.tiff"),
+  });
+  t.truthy(fs.statSync(path.resolve(__dirname, "images/diff_generated.tiff.png")));
+});
+
+test("compare with 2 jpeg files", async t => {
   const diffFilename = path.resolve(__dirname, "images/diff_generated.jpg.png");
   rimraf.sync(diffFilename);
   const { width, height } = await imgDiff({
