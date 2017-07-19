@@ -1,6 +1,6 @@
 {
   "name": "img-diff-js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Library to compare 2 images",
   "main": "lib/index.js",
   "scripts": {
