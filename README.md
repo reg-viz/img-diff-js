@@ -31,7 +31,7 @@ imgDiff({
 ## API Usage
 
 ### `imgDiff(opt: ImgDiffOptions): Promise<ImgDiffRestul>`
-Create image differential between two images
+Create image differential between two images.
 
 #### `ImgDiffOptions`
 
