@@ -77,6 +77,8 @@ The following codecs are available for input image files.
 
 `imgDiff` detects the input image format from it's extension name. For example, if the input file name ends with ".jpeg", `imgDiff` attempts to decode in JPEG way regardless of the actual file format.
 
+The output image format is PNG only.
+
 ## Performance
 
  | case name | img-diff-js | image-difference | image-diff | 
