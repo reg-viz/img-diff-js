@@ -49,7 +49,7 @@ Create image differential between two images
 
 - `actualFilename` - *Required* - Path to actual image file.
 - `expectedFilename` - *Required* - Path to expected image file.
-- `diffFilename` - *Optional* - Path to differential image file. If omitted it, `imgDiff` does does not output image file.
+- `diffFilename` - *Optional* - Path to differential image file. If omitted, `imgDiff` does not output image file.
 - `options` - *Optional* - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
 
 #### `ImgDiffResult`
