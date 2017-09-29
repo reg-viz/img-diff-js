@@ -197,9 +197,9 @@ ava-init@^0.2.0:
     read-pkg-up "^2.0.0"
     write-pkg "^3.1.0"
 
-ava@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/ava/-/ava-0.21.0.tgz#cd8d8ea3546f57150dea38548b9f72f8ca583d29"
+ava@^0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/ava/-/ava-0.22.0.tgz#4c28a1fdef7e749ba0c8131ac18a7ca489eef049"
   dependencies:
     "@ava/babel-preset-stage-4" "^1.1.0"
     "@ava/babel-preset-transform-test-files" "^3.0.0"
@@ -883,14 +883,14 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cp-file@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/cp-file/-/cp-file-4.2.0.tgz#715361663b71ede0b6dddbc3c80e2ba02e725ec3"
+cp-file@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/cp-file/-/cp-file-5.0.0.tgz#bc700fd30ca32d24d46c7fb02b992e435fc5a978"
   dependencies:
     graceful-fs "^4.1.2"
     make-dir "^1.0.0"
     nested-error-stacks "^2.0.0"
-    pify "^2.3.0"
+    pify "^3.0.0"
     safe-buffer "^5.0.1"
 
 create-error-class@^3.0.0:
@@ -970,8 +970,8 @@ decamelize@^1.1.2:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
 decode-tiff@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-tiff/-/decode-tiff-0.2.0.tgz#540b2949efedee689e3e20224cc04af6b82ad88a"
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/decode-tiff/-/decode-tiff-0.2.1.tgz#c18ca071b8decf5d49b0c732ead4f6bb061142cb"
 
 deep-equal@^1.0.0:
   version "1.0.1"
@@ -1410,9 +1410,9 @@ ignore-by-default@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ignore-by-default/-/ignore-by-default-1.0.1.tgz#48ca6d72f6c6a3af00a9ad4ae6876be3889e2b09"
 
-image-diff@^1.6.3:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/image-diff/-/image-diff-1.6.3.tgz#818a0e656ae89480e802e7ef14db460826f730fc"
+image-diff@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/image-diff/-/image-diff-2.0.0.tgz#3939e957e527c23f149026b46da5185a59362fa3"
   dependencies:
     async "~0.2.9"
     buffered-spawn "~1.1.1"
@@ -2155,6 +2155,10 @@ pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
+pify@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
+
 pinkie-promise@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-1.0.0.tgz#d1da67f5482563bb7cf57f286ae2822ecfbf3670"
@@ -2204,9 +2208,13 @@ plur@^2.0.0:
   dependencies:
     irregular-plurals "^1.0.0"
 
-pngjs@^3.0.0, pngjs@^3.2.0:
+pngjs@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.2.0.tgz#fc9fcea1a8a375da54a51148019d5abd41dbabde"
+
+pngjs@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.0.tgz#1f5730c189c94933b81beda2ab2f8e2855263a8f"
 
 prepend-http@^1.0.1:
   version "1.0.4"
@@ -2446,9 +2454,15 @@ restore-cursor@^2.0.0:
     onetime "^2.0.0"
     signal-exit "^3.0.2"
 
-rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.5.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
+  dependencies:
+    glob "^7.0.5"
+
+rimraf@^2.6.1:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
     glob "^7.0.5"
 
