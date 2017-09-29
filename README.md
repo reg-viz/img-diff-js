@@ -60,12 +60,14 @@ Create image differential between two images.
   width: number;
   height: number;
   imagesAreSame: boolean;
+  diffCount: number;
 }
 ```
 
 - `width` - Differential image's width.
 - `height` - Differential image's height.
 - `imagesAreSame` - It'll be true only if 2 images are same perfectly.
+- `diffCount` - The number of differential pixels.
 
 ## Available format
 
