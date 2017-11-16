@@ -42,6 +42,7 @@ Create image differential between two images.
   expectedFilename: string;
   diffFilename?: string;
   options?: {
+    preprocess?: ([Image, Image]) => void | Promise<[Image, Image]>;
     threshold?: number;   // default 0.1
     includeAA?: boolean;  // default false
   }
@@ -51,7 +52,18 @@ Create image differential between two images.
 - `actualFilename` - *Required* - Path to actual image file.
 - `expectedFilename` - *Required* - Path to expected image file.
 - `diffFilename` - *Optional* - Path to differential image file. If omitted, `imgDiff` does not output image file.
-- `options` - *Optional* - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
+- `options` - *Optional* 
+- `options.preprocess` - *Optional* - Preprocess function. It's called with decoded images and also can process them.
+- `options.threshold`, `options.includeAA` - *Optional* - Parameters using by [pixelmatch](https://github.com/mapbox/pixelmatch#api).
+
+#### `Image`
+```ts
+{
+  width: number;
+  height: number;
+  data: Uint8Array;
+}
+```
 
 #### `ImgDiffResult`
 

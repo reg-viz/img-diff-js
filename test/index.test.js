@@ -61,3 +61,32 @@ test("compare with 2 jpeg files", async t => {
   });
   t.truthy(fs.statSync(path.resolve(__dirname, "images/diff_generated.jpg.png")));
 });
+
+test("call preprocess hook", async t => {
+  let called = false;
+  await imgDiff({
+    actualFilename: path.resolve(__dirname, "images/expected.png"),
+    expectedFilename: path.resolve(__dirname, "images/expected.png"),
+    options: {
+      preprocess: ([img1, img2]) => {
+        called = !!img1 && !!img2;
+      },
+    },
+  });
+  t.is(called, true);
+});
+
+test("call preprocess hook with promiss", async t => {
+  let called = false;
+  await imgDiff({
+    actualFilename: path.resolve(__dirname, "images/expected.png"),
+    expectedFilename: path.resolve(__dirname, "images/expected.png"),
+    options: {
+      preprocess: ([img1, img2]) => {
+        called = !!img1 && !!img2;
+        return Promise.resolve([img2, img1]);
+      },
+    },
+  });
+  t.is(called, true);
+});
