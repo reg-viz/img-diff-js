@@ -44,6 +44,7 @@ Create image differential between two images.
   options?: {
     threshold?: number;   // default 0.1
     includeAA?: boolean;  // default false
+    generateOnlyDiffFile: boolean; // default false
   }
 }
 ```
@@ -52,6 +53,7 @@ Create image differential between two images.
 - `expectedFilename` - *Required* - Path to expected image file.
 - `diffFilename` - *Optional* - Path to differential image file. If omitted, `imgDiff` does not output image file.
 - `options` - *Optional* - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
+- `options.generateOnlyDiffFile` - *Optional* - Generate only files with difference
 
 #### `ImgDiffResult`
 
