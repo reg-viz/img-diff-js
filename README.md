@@ -41,10 +41,10 @@ Create image differential between two images.
   actualFilename: string;
   expectedFilename: string;
   diffFilename?: string;
+  generateOnlyDiffFile?: boolean; // default false
   options?: {
     threshold?: number;   // default 0.1
     includeAA?: boolean;  // default false
-    generateOnlyDiffFile: boolean; // default false
   }
 }
 ```
@@ -52,8 +52,8 @@ Create image differential between two images.
 - `actualFilename` - *Required* - Path to actual image file.
 - `expectedFilename` - *Required* - Path to expected image file.
 - `diffFilename` - *Optional* - Path to differential image file. If omitted, `imgDiff` does not output image file.
+- `generateOnlyDiffFile` - *Optional* - Generate only files with difference
 - `options` - *Optional* - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
-- `options.generateOnlyDiffFile` - *Optional* - Generate only files with difference
 
 #### `ImgDiffResult`
 
