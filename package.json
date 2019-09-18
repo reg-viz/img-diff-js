@@ -26,7 +26,7 @@
     "decode-tiff": "^0.2.0",
     "jpeg-js": "^0.3.3",
     "mkdirp": "^0.5.1",
-    "pixelmatch": "^4.0.2",
+    "pixelmatch": "^5.0.0",
     "pngjs": "^3.2.0"
   },
   "devDependencies": {
