@@ -43,7 +43,7 @@ Create image differential between two images.
   expectedType?: string,
   expected?: string | Buffer | NodeJS.ReadStream,
   diffFilename?: string,
-  generateOnlyDiffFile?: boolean,
+  generateOnlyDiffFile?: boolean, //Defaults to false.
   options?: {
     threshold?: number; //Defaults to 0.1.
     includeAA?: boolean; //Defaults to false.
@@ -98,7 +98,7 @@ The output image format is PNG only.
 The above table was captured under [Travis-CI](https://travis-ci.org/reg-viz/img-diff-js). If you want the latest result, check the raw log.
 
 ## Contributing
-Pull requests and issues are welcome. :smile:
+Pull requests and issues are welcome. ;)
 
 ## License
 MIT License. See LICENSE under this repository.
