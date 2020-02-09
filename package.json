@@ -25,6 +25,7 @@
   "dependencies": {
     "decode-tiff": "^0.2.0",
     "jpeg-js": "^0.3.3",
+    "mime-types": "^2.1.26",
     "mkdirp": "^0.5.1",
     "pixelmatch": "^5.0.0",
     "pngjs": "^3.2.0"
