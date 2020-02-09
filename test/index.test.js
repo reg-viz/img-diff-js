@@ -40,7 +40,7 @@ test("compare with 2 files whose dimension are different", async t => {
   t.truthy(fs.statSync(path.resolve(__dirname, "images/diff_generated.wide.png")));
 });
 
-test("compare with 2 jpeg files", async t => {
+test("compare with 2 tiff files", async t => {
   const diffFilename = path.resolve(__dirname, "images/diff_generated.tiff.png");
   rimraf.sync(diffFilename);
   const { width, height } = await imgDiff({
