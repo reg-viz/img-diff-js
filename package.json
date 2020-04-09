@@ -27,7 +27,7 @@
     "jpeg-js": "^0.3.3",
     "mkdirp": "^0.5.1",
     "pixelmatch": "^5.0.0",
-    "pngjs": "^3.2.0"
+    "pngjs": "^4.0.0"
   },
   "devDependencies": {
     "ava": "^0.24.0",
