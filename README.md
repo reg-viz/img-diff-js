@@ -2,7 +2,6 @@
 
 [![github actions](https://github.com/reg-viz/img-diff-js/workflows/build/badge.svg)](https://github.com/reg-viz/img-diff-js/actions)
 [![Build Status](https://travis-ci.org/reg-viz/img-diff-js.svg?branch=master)](https://travis-ci.org/reg-viz/img-diff-js)
-[![Greenkeeper badge](https://badges.greenkeeper.io/reg-viz/img-diff-js.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/img-diff-js.svg)](https://badge.fury.io/js/img-diff-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -88,9 +87,9 @@ The output image format is PNG only.
 
 | case name                   | img-diff-js | image-difference | image-diff |
 | :-------------------------- | ----------: | ---------------: | ---------: |
-| 50 same dimension PNGs      |    936 msec |       11018 msec | 16539 msec |
-| 50 different dimension PNGs |    715 msec |       16077 msec | 16639 msec |
-| 50 same dimension JPEGs     |   1076 msec |       10910 msec | 19078 msec |
+| 50 same dimension PNGs      |    376 msec |        1967 msec |  3143 msec |
+| 50 different dimension PNGs |    274 msec |        2979 msec |  3520 msec |
+| 50 same dimension JPEGs     |    449 msec |        2422 msec |  4376 msec |
 
 The above table was captured under [Travis-CI](https://travis-ci.org/reg-viz/img-diff-js). If you want the latest result, check the raw log.
 
