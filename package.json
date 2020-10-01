@@ -7,10 +7,12 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
+    "test:ci": "jest --coverage",
     "prettier": "prettier \"*.md\" \"*.json\" \"*.yml\" \"src/**/*\" \"tool/**/*\"",
     "format": "yarn prettier --write",
     "format:check": "yarn prettier --check",
     "lint": "yarn format:check",
+    "preperf": "tsc",
     "perf": "node tool/perf.js"
   },
   "repository": {
