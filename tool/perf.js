@@ -57,7 +57,7 @@ rimraf.sync(".performance");
 mkdirp.sync(".performance");
 
 function images(strings, ...values) {
-  return path.resolve(__dirname, "../test/images/" + strings[0]);
+  return path.resolve(__dirname, "../test-images/" + strings[0]);
 }
 
 [
