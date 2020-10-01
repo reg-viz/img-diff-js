@@ -3,8 +3,16 @@
   "version": "0.4.1",
   "description": "Library to compare 2 images",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "ava",
+    "build": "tsc",
+    "test": "jest",
+    "test:ci": "jest --coverage",
+    "prettier": "prettier \"*.md\" \"*.json\" \"*.yml\" \"src/**/*\" \"tool/**/*\"",
+    "format": "yarn prettier --write",
+    "format:check": "yarn prettier --check",
+    "lint": "yarn format:check",
+    "preperf": "tsc",
     "perf": "node tool/perf.js"
   },
   "repository": {
@@ -23,20 +31,58 @@
   },
   "homepage": "https://github.com/reg-viz/img-diff-js#readme",
   "dependencies": {
+    "@types/mkdirp": "^1.0.1",
+    "@types/node": "^14.11.2",
+    "@types/pixelmatch": "^5.2.2",
+    "@types/pngjs": "^3.4.2",
     "decode-tiff": "^0.2.0",
-    "jpeg-js": "^0.3.3",
-    "mkdirp": "^0.5.1",
-    "pixelmatch": "^5.0.0",
-    "pngjs": "^3.2.0"
+    "jpeg-js": "^0.4.2",
+    "mkdirp": "^1.0.4",
+    "pixelmatch": "^5.2.1",
+    "pngjs": "^5.0.0"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
-    "cp-file": "^6.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/rimraf": "^3.0.0",
+    "cp-file": "^9.0.0",
+    "husky": "^4.3.0",
     "image-diff": "^2.0.0",
     "image-difference": "^2.0.7",
-    "rimraf": "^3.0.0"
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
   },
-  "ava": {
-    "files": "test/**/*.test.js"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!**/testing/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
   }
 }

@@ -1,16 +1,14 @@
 # img-diff-js
 
-[![CircleCI](https://circleci.com/gh/reg-viz/img-diff-js.svg?style=svg)](https://circleci.com/gh/reg-viz/img-diff-js)
+[![github actions](https://github.com/reg-viz/img-diff-js/workflows/build/badge.svg)](https://github.com/reg-viz/img-diff-js/actions)
 [![Build Status](https://travis-ci.org/reg-viz/img-diff-js.svg?branch=master)](https://travis-ci.org/reg-viz/img-diff-js)
-[![Greenkeeper badge](https://badges.greenkeeper.io/reg-viz/img-diff-js.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/img-diff-js.svg)](https://badge.fury.io/js/img-diff-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-
 :art: Node.js library to compare 2 images without native libs.
 
-| Actual | Expected | Difference |
-|:---:|:---:|:---:|
+|            Actual             |             Expected              |        Difference         |
+| :---------------------------: | :-------------------------------: | :-----------------------: |
 | ![actual](example/actual.png) | ![expected](example/expected.png) | ![diff](example/diff.png) |
 
 ## Install
@@ -20,18 +18,19 @@ npm install img-diff-js
 ```
 
 ```js
-const { imgDiff } = require('img-diff-js');
+const { imgDiff } = require("img-diff-js");
 
 imgDiff({
-  actualFilename: 'example/actual.png',
-  expectedFilename: 'example/expected.png',
-  diffFilename: 'example/diff.png',
+  actualFilename: "example/actual.png",
+  expectedFilename: "example/expected.png",
+  diffFilename: "example/diff.png",
 }).then(result => console.log(result));
 ```
 
 ## API Usage
 
 ### `imgDiff(opt: ImgDiffOptions): Promise<ImgDiffResult>`
+
 Create image differential between two images.
 
 #### `ImgDiffOptions`
@@ -49,11 +48,11 @@ Create image differential between two images.
 }
 ```
 
-- `actualFilename` - *Required* - Path to actual image file.
-- `expectedFilename` - *Required* - Path to expected image file.
-- `diffFilename` - *Optional* - Path to differential image file. If omitted, `imgDiff` does not output image file.
-- `generateOnlyDiffFile` - *Optional* - Generate only files with difference
-- `options` - *Optional* - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
+- `actualFilename` - _Required_ - Path to actual image file.
+- `expectedFilename` - _Required_ - Path to expected image file.
+- `diffFilename` - _Optional_ - Path to differential image file. If omitted, `imgDiff` does not output image file.
+- `generateOnlyDiffFile` - _Optional_ - Generate only files with difference
+- `options` - _Optional_ - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
 
 #### `ImgDiffResult`
 
@@ -86,15 +85,16 @@ The output image format is PNG only.
 
 ## Performance
 
- | case name | img-diff-js | image-difference | image-diff | 
- |:---|---:|---:|---:|
- | 50 same dimension PNGs | 936 msec | 11018 msec | 16539 msec | 
- | 50 different dimension PNGs | 715 msec | 16077 msec | 16639 msec | 
- | 50 same dimension JPEGs | 1076 msec | 10910 msec | 19078 msec | 
+| case name                   | img-diff-js | image-difference | image-diff |
+| :-------------------------- | ----------: | ---------------: | ---------: |
+| 50 same dimension PNGs      |    376 msec |        1967 msec |  3143 msec |
+| 50 different dimension PNGs |    274 msec |        2979 msec |  3520 msec |
+| 50 same dimension JPEGs     |    449 msec |        2422 msec |  4376 msec |
 
 The above table was captured under [Travis-CI](https://travis-ci.org/reg-viz/img-diff-js). If you want the latest result, check the raw log.
 
 ## Contribute
+
 PR or issue is welcome :)
 
 ### Setup
