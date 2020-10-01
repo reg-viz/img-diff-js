@@ -1,0 +1,12 @@
+lib/
+coverage/
+*.tsbuildinfo
+*.png
+.gitignore
+.npmignore
+node_modules/
+*.sh
+*.log
+.env
+.env.*
+example/

@@ -1,6 +1,6 @@
 import test from "ava";
 import path from "path";
-const decodeJpeg = require("../lib/decode-jpeg");
+const decodeJpeg = require("../lib/decode-jpeg").default;
 
 test("decode jpeg file", async t => {
   const file = path.resolve(__dirname, "images/actual.jpg");

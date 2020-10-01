@@ -1,6 +1,6 @@
 import test from "ava";
 import path from "path";
-const decodeTiff = require("../lib/decode-tiff");
+const decodeTiff = require("../lib/decode-tiff").default;
 
 test("decode tiff file", async t => {
   const file = path.resolve(__dirname, "images/actual.tiff");

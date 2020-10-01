@@ -1,4 +1,6 @@
-function createExpandedData(originalImage, width, height) {
+import { ImageData } from "./types";
+
+function createExpandedData(originalImage: ImageData, width: number, height: number) {
   if (originalImage.width === width && originalImage.height === height) {
     return originalImage.data;
   }
@@ -24,7 +26,7 @@ function createExpandedData(originalImage, width, height) {
   return newData;
 }
 
-function expand(img1, img2) {
+export default function expand(img1: ImageData, img2: ImageData) {
   if (img1.width === img2.width && img1.height === img2.height) {
     return {
       dataList: [img1.data, img2.data],
@@ -43,5 +45,3 @@ function expand(img1, img2) {
     ],
   };
 }
-
-module.exports = expand;

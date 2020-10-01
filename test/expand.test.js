@@ -4,8 +4,8 @@ import fs from "fs";
 
 const rimraf = require("rimraf");
 const { PNG } = require("pngjs");
-const decodePng = require("../lib/decode-png");
-const expand = require("../lib/expand");
+const decodePng = require("../lib/decode-png").default;
+const expand = require("../lib/expand").default;
 
 test("not expand from same dimension images", async t => {
   const img1 = await decodePng(path.resolve(__dirname, "images/actual.png"));

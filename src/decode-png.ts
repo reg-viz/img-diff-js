@@ -1,8 +1,9 @@
-const fs = require("fs");
-const PNG = require("pngjs").PNG;
+import fs from "fs";
+import { PNG } from "pngjs";
+import { ImageData } from "./types";
 
-function decodePng(filename) {
-  return new Promise((resolve, reject) => {
+export default function decodePng(filename: string) {
+  return new Promise<ImageData>((resolve, reject) => {
     try {
       fs.createReadStream(filename).pipe(new PNG())
         .on("parsed", function() {
@@ -17,5 +18,3 @@ function decodePng(filename) {
     }
   });
 }
-
-module.exports = decodePng;
