@@ -12,7 +12,7 @@ function createExpandedData(originalImage: ImageData, width: number, height: num
   for (let j = 0; j < height; j++) {
     if (j < origHeight) {
       for (let i = 0; i < width; i++) {
-        idx = ((j * width) + i) << 2;
+        idx = (j * width + i) << 2;
         if (i < origWidth) {
           const origIdx = (j * origWidth + i) << 2;
           newData[idx] = origData[origIdx];
@@ -39,9 +39,6 @@ export default function expand(img1: ImageData, img2: ImageData) {
   return {
     width,
     height,
-    dataList: [
-      createExpandedData(img1, width, height),
-      createExpandedData(img2, width, height),
-    ],
+    dataList: [createExpandedData(img1, width, height), createExpandedData(img2, width, height)],
   };
 }
