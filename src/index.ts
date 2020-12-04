@@ -40,17 +40,14 @@ function compare(
   img2: ImageData,
   diffFilename?: string,
   generateOnlyDiffFile: boolean = false,
-  options: PixelmatchOptions = {},
+  options: PixelmatchOptions = { threshold: 0.1, includeAA: false },
 ): Promise<ImgDiffResult> {
   const { dataList, width, height } = expand(img1, img2);
   const diff = new PNG({ width, height });
-  const pmOpt = Object.assign(
-    {
-      threshold: 0.1,
-      includeAA: false,
-    },
-    options || {},
-  );
+  const pmOpt: PixelmatchOptions = {
+    threshold: 0,
+    ...options,
+  };
 
   const count = pixelmatch(dataList[0], dataList[1], diff.data, width, height, pmOpt);
   const imagesAreSame = count === 0;
