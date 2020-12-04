@@ -60,3 +60,33 @@ test("compare with 2 jpeg files", async () => {
   });
   expect(fs.statSync(path.resolve(__dirname, "../test-images/diff_generated.jpg.png"))).toBeTruthy();
 });
+
+describe("threshold pattern", () => {
+  test("no option object", async () => {
+    const result = await imgDiff({
+      actualFilename: path.resolve(__dirname, "../test-images/actual.png"),
+      expectedFilename: path.resolve(__dirname, "../test-images/expected.png"),
+    });
+    expect(result.imagesAreSame).toBeFalsy();
+  });
+
+  test("threshold is undefined", async () => {
+    const result = await imgDiff({
+      actualFilename: path.resolve(__dirname, "../test-images/actual.png"),
+      expectedFilename: path.resolve(__dirname, "../test-images/expected.png"),
+      options: {},
+    });
+    expect(result.imagesAreSame).toBeFalsy();
+  });
+
+  test("set threshold explicitly", async () => {
+    const result = await imgDiff({
+      actualFilename: path.resolve(__dirname, "../test-images/actual.png"),
+      expectedFilename: path.resolve(__dirname, "../test-images/expected.png"),
+      options: {
+        threshold: 1.0,
+      },
+    });
+    expect(result.imagesAreSame).toBeTruthy();
+  });
+});
