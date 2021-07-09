@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
-    "@types/rimraf": "3.0.0",
+    "@types/rimraf": "3.0.1",
     "cp-file": "9.1.0",
     "husky": "7.0.1",
     "image-diff": "2.0.0",
