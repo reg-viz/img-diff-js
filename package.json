@@ -45,13 +45,13 @@
     "pngjs": "^6.0.0"
   },
   "devDependencies": {
-    "@types/jest": "27.0.2",
+    "@types/jest": "27.0.3",
     "@types/rimraf": "3.0.2",
     "cp-file": "9.1.0",
     "husky": "7.0.4",
     "image-diff": "2.0.0",
     "image-difference": "2.0.7",
-    "jest": "27.3.1",
+    "jest": "27.4.5",
     "pinst": "2.1.6",
     "prettier": "2.4.1",
     "pretty-quick": "3.1.1",
