@@ -45,7 +45,7 @@
     "pngjs": "^6.0.0"
   },
   "devDependencies": {
-    "@types/jest": "27.4.1",
+    "@types/jest": "27.5.0",
     "@types/rimraf": "3.0.2",
     "cp-file": "9.1.0",
     "husky": "7.0.4",
