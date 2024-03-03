@@ -40,7 +40,7 @@
     "@types/pngjs": "^6.0.0",
     "decode-tiff": "^0.2.0",
     "jpeg-js": "^0.4.2",
-    "mkdirp": "^1.0.4",
+    "mkdirp": "^3.0.0",
     "pixelmatch": "^5.2.1",
     "pngjs": "^6.0.0"
   },
