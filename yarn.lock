@@ -911,9 +911,9 @@
     undici-types "~5.26.4"
 
 "@types/node@^16.0.0":
-  version "16.11.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
-  integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
+  version "16.18.86"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.86.tgz#87426ce3747a4c135229e15765cbf9c5a18d280c"
+  integrity sha512-QMvdZf+ZTSiv7gspwhqbfB7Y5DmbYgCsUnakS8Ul9uRbJQehDKaM7SL+GbcDS003Lh7VK4YlelHsRm9HCv26eA==
 
 "@types/pixelmatch@^5.2.2":
   version "5.2.6"
