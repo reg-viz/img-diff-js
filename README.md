@@ -1,7 +1,6 @@
 # img-diff-js
 
 [![github actions](https://github.com/reg-viz/img-diff-js/workflows/build/badge.svg)](https://github.com/reg-viz/img-diff-js/actions)
-[![Build Status](https://travis-ci.org/reg-viz/img-diff-js.svg?branch=master)](https://travis-ci.org/reg-viz/img-diff-js)
 [![npm version](https://badge.fury.io/js/img-diff-js.svg)](https://badge.fury.io/js/img-diff-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -82,16 +81,6 @@ The following codecs are available for input image files.
 `imgDiff` detects the input image format from it's extension name. For example, if the input file name ends with ".jpeg", `imgDiff` attempts to decode in JPEG way regardless of the actual file format.
 
 The output image format is PNG only.
-
-## Performance
-
-| case name                   | img-diff-js | image-difference | image-diff |
-| :-------------------------- | ----------: | ---------------: | ---------: |
-| 50 same dimension PNGs      |    376 msec |        1967 msec |  3143 msec |
-| 50 different dimension PNGs |    274 msec |        2979 msec |  3520 msec |
-| 50 same dimension JPEGs     |    449 msec |        2422 msec |  4376 msec |
-
-The above table was captured under [Travis-CI](https://travis-ci.org/reg-viz/img-diff-js). If you want the latest result, check the raw log.
 
 ## Contribute
 
