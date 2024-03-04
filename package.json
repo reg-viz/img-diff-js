@@ -40,7 +40,7 @@
     "jpeg-js": "^0.4.2",
     "mkdirp": "^1.0.4",
     "pixelmatch": "^5.2.1",
-    "pngjs": "^6.0.0"
+    "pngjs": "^7.0.0"
   },
   "devDependencies": {
     "@types/jest": "29.5.12",
