@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import decodeJpeg from "./decode-jpeg";
 
 test("decode jpeg file", async () => {

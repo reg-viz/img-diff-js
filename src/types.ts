@@ -1,4 +1,4 @@
-import { PixelmatchOptions } from "pixelmatch";
+import type { PixelmatchOptions } from "pixelmatch";
 
 export interface ImageData {
   width: number;

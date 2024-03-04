@@ -1,4 +1,4 @@
-import { ImageData } from "./types";
+import type { ImageData } from "./types";
 
 function createExpandedData(originalImage: ImageData, width: number, height: number) {
   if (originalImage.width === width && originalImage.height === height) {

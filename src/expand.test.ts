@@ -1,6 +1,6 @@
-import path from "path";
-import fs from "fs";
-import rimraf from "rimraf";
+import path from "node:path";
+import fs from "node:fs";
+import * as rimraf from "rimraf";
 import { PNG } from "pngjs";
 
 import decodePng from "./decode-png";
