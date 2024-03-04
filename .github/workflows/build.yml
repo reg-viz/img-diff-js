@@ -29,8 +29,9 @@ jobs:
           npm run test:ci
         env:
           CI: true
-#     - uses: codecov/codecov-action@v1
-#       with:
-#         name: jest
-#         token: ${{ secrets.CODECOV_TOKEN }}
-#         file: ./coverage/coverage-final.json
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: reg-viz/img-diff-js
+          files: ./coverage/coverage-final.json

@@ -2,6 +2,7 @@
 
 [![github actions](https://github.com/reg-viz/img-diff-js/workflows/build/badge.svg)](https://github.com/reg-viz/img-diff-js/actions)
 [![npm version](https://badge.fury.io/js/img-diff-js.svg)](https://badge.fury.io/js/img-diff-js)
+[![codecov](https://codecov.io/gh/reg-viz/img-diff-js/graph/badge.svg?token=6QopebRnI6)](https://codecov.io/gh/reg-viz/img-diff-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 :art: Node.js library to compare 2 images without native libs.
