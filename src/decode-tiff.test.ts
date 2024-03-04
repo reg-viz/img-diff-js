@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import decodeTiff from "./decode-tiff";
 
 test("decode tiff file", async () => {

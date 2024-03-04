@@ -1,10 +1,10 @@
-import fs from "fs";
-import path from "path";
-import pixelmatch, { PixelmatchOptions } from "pixelmatch";
+import fs from "node:fs";
+import path from "node:path";
+import pixelmatch, { type PixelmatchOptions } from "pixelmatch";
 import { PNG } from "pngjs";
 import mkdirp from "mkdirp";
 
-import { ImageData, Decorder, ImgDiffOptions, ImgDiffResult } from "./types";
+import type { ImageData, Decorder, ImgDiffOptions, ImgDiffResult } from "./types";
 import decodePng from "./decode-png";
 import decodeJpeg from "./decode-jpeg";
 import decodeTiff from "./decode-tiff";

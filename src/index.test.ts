@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import rimraf from "rimraf";
+import fs from "node:fs";
+import path from "node:path";
+import * as rimraf from "rimraf";
 import { imgDiff } from "./";
 
 test("compare with 2 png files", async () => {

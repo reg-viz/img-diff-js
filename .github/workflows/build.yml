@@ -1,6 +1,10 @@
 name: build
 
-on: [pull_request, push]
+on:
+  pull_request:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -8,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -16,12 +20,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          cache: npm
       - name: npm install, build, and test
         run: |
-          yarn --frozen-lockfile
-          yarn build 
-          yarn lint 
-          yarn test:ci
+          npm ci
+          npm run build 
+          npm run lint 
+          npm run test:ci
         env:
           CI: true
 #     - uses: codecov/codecov-action@v1

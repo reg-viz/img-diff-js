@@ -1,6 +1,6 @@
-import fs from "fs";
+import fs from "node:fs";
 import { PNG } from "pngjs";
-import { ImageData } from "./types";
+import type { ImageData } from "./types";
 
 export default function decodePng(filename: string) {
   return new Promise<ImageData>((resolve, reject) => {

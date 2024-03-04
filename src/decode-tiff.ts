@@ -1,5 +1,5 @@
-import fs from "fs";
-import { ImageData } from "./types";
+import fs from "node:fs";
+import type { ImageData } from "./types";
 
 const { decode } = require("decode-tiff") as { decode: (buffer: ArrayBuffer | Buffer) => ImageData };
 
