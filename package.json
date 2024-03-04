@@ -9,7 +9,7 @@
     "build": "tsc",
     "test": "jest",
     "test:ci": "jest --coverage",
-    "prettier": "prettier \"*.md\" \"*.json\" \"*.yml\" \"src/**/*\" \"tool/**/*\"",
+    "prettier": "prettier \"*.md\" \"*.json\" \"*.yml\" \"src/**/*\"",
     "format": "npm run prettier -- --write",
     "format:check": "npm run prettier -- --check",
     "lint": "npm run format:check",
