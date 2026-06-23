@@ -1,4 +1,4 @@
-import type { PixelmatchOptions } from "pixelmatch";
+import type { CoreOptions as BlazeDiffOptions } from "@blazediff/core";
 
 export interface ImageData {
   width: number;
@@ -15,7 +15,7 @@ export interface ImgDiffOptions {
   expectedFilename: string;
   diffFilename?: string;
   generateOnlyDiffFile?: boolean;
-  options?: PixelmatchOptions;
+  options?: BlazeDiffOptions;
 }
 
 export interface ImgDiffResult {
