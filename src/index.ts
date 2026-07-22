@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import pixelmatch, { type PixelmatchOptions } from "pixelmatch";
+import { diff as blazediff, type CoreOptions as BlazeDiffOptions } from "@blazediff/core";
 import { PNG } from "pngjs";
 import mkdirp from "mkdirp";
 
@@ -40,16 +40,16 @@ function compare(
   img2: ImageData,
   diffFilename?: string,
   generateOnlyDiffFile: boolean = false,
-  options: PixelmatchOptions = { threshold: 0.1, includeAA: false },
+  options: BlazeDiffOptions = { threshold: 0.1, includeAA: false },
 ): Promise<ImgDiffResult> {
   const { dataList, width, height } = expand(img1, img2);
   const diff = new PNG({ width, height });
-  const pmOpt: PixelmatchOptions = {
+  const pmOpt: BlazeDiffOptions = {
     threshold: 0,
     ...options,
   };
 
-  const count = pixelmatch(dataList[0], dataList[1], diff.data, width, height, pmOpt);
+  const count = blazediff(dataList[0], dataList[1], diff.data, width, height, pmOpt);
   const imagesAreSame = count === 0;
   const result = {
     width,
