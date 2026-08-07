@@ -32,17 +32,16 @@
   },
   "homepage": "https://github.com/reg-viz/img-diff-js#readme",
   "dependencies": {
+    "@blazediff/core": "^1.9.0",
     "decode-tiff": "^0.2.0",
     "jpeg-js": "^0.4.2",
     "mkdirp": "^1.0.4",
-    "pixelmatch": "^5.2.1",
     "pngjs": "^7.0.0"
   },
   "devDependencies": {
     "@types/jest": "29.5.14",
     "@types/mkdirp": "^1.0.1",
     "@types/node": "^20.0.0",
-    "@types/pixelmatch": "^5.2.2",
     "@types/pngjs": "^6.0.0",
     "@types/rimraf": "4.0.5",
     "cp-file": "11.0.0",
