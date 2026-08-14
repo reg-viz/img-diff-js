@@ -41,7 +41,7 @@
   "devDependencies": {
     "@types/jest": "29.5.14",
     "@types/mkdirp": "^1.0.1",
-    "@types/node": "^20.0.0",
+    "@types/node": "^24.0.0",
     "@types/pixelmatch": "^5.2.2",
     "@types/pngjs": "^6.0.0",
     "@types/rimraf": "4.0.5",
