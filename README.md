@@ -52,7 +52,7 @@ Create image differential between two images.
 - `expectedFilename` - _Required_ - Path to expected image file.
 - `diffFilename` - _Optional_ - Path to differential image file. If omitted, `imgDiff` does not output image file.
 - `generateOnlyDiffFile` - _Optional_ - Generate only files with difference
-- `options` - _Optional_ - An object to pass through [pixelmatch](https://github.com/mapbox/pixelmatch#api).
+- `options` - _Optional_ - An object to pass through [BlazeDiff](https://www.blazediff.dev/docs/core#api-reference).
 
 #### `ImgDiffResult`
 
